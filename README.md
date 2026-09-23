@@ -10,6 +10,12 @@ The project was originally developed as a personal Java programming project.
 
 The implemented calculator functionality is complete and focused on basic arithmetic operations. More advanced features were considered for future development but are not part of the current version.
 
+## Project History
+
+Originally developed in 2024 as a personal Java programming project.
+
+The current repository was later reorganized and documented while preserving the original project history.
+
 ## Screenshot
 
 ![Calculator application](docs/screenshots/calculator.png)
