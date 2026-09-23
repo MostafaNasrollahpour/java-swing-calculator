@@ -1,11 +1,11 @@
-package org.example;
+package com.mostafanasrollahpour.calculator;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MyFrame implements ActionListener {
+public class Calculator implements ActionListener {
     private final Color INVISIBLE = new Color(0, 0, 0, 0);
     private final String STR = "Try Something";
     private final String[] ARRAY = {"+", "-", "*", "/", "%"};
@@ -21,13 +21,15 @@ public class MyFrame implements ActionListener {
     private double first = 0.0;
     private double second = 0.0;
 
-    public MyFrame() {
-        ImageIcon icon = new ImageIcon("myFiles/images/icon.png");
+    public Calculator() {
+        var iconUrl = Calculator.class.getResource("/images/icon.png");
 
         frame = new JFrame("Calculator");
         frame.setBounds(300, 100, 400, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setIconImage(icon.getImage());
+
+        if(iconUrl != null) frame.setIconImage(new ImageIcon(iconUrl).getImage());
+
         frame.setLayout(null);
 
         resultPanel = new JPanel();
@@ -298,8 +300,4 @@ public class MyFrame implements ActionListener {
             updateResult(number);
     }
 
-
-    public static void main(String[] args) {
-        new MyFrame();
-    }
 }
